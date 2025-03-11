@@ -1,4 +1,4 @@
-{% set version = '0.2.1' %}
+{% set version = "0.2.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/stpphawkes_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/stpphawkes/stpphawkes_{{ version }}.tar.gz
-  sha256: 7ad1f57589967ac8a68b7ec6841cfeb1213c76944fb955a87f11424da5dbd0d5
+  sha256: cc661246f2434843418ec5977d04dae8c9984635e2613e66de98fe2ae2a869d2
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -51,7 +51,7 @@ requirements:
     - liblapack
     - libgomp                      # [not osx]
     - gsl
-    - llvm-openmp     
+    - llvm-openmp
   run:
     - libgomp                      # [win]
     - r-base
@@ -74,9 +74,7 @@ test:
 about:
   home: https://CRAN.R-project.org/package=stpphawkes
   license: MIT
-  summary: Estimation of model parameters for marked Hawkes process. Accounts for missing data
-    in the estimation of the parameters. Technical details found in (Tucker et al.,
-    2019 <DOI:10.1016/j.spasta.2018.12.004>).
+  summary: Estimation of model parameters for marked Hawkes process. Accounts for missing data in the estimation of the parameters. Technical details found in (Tucker et al., 2019 <DOI:10.1016/j.spasta.2018.12.004>).
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
     - LICENSE
