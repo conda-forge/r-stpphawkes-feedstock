@@ -1,4 +1,4 @@
-{% set version = "0.2.2" %}
+{% set version = "0.2.4" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/stpphawkes_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/stpphawkes/stpphawkes_{{ version }}.tar.gz
-  sha256: cc661246f2434843418ec5977d04dae8c9984635e2613e66de98fe2ae2a869d2
+  sha256: 83e0ca9559038391e7e2999ea5299f80afadcc5fff067e473ddf377f6cc41db4
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
